@@ -11,7 +11,7 @@ const Modal = () => {
   const { setShowModal, trailerID, setTrailerID } = UserAuth();
   const [video, setVideo] = useState([]);
 
-  const url = `http://api.themoviedb.org/3/movie/${trailerID?.id}/videos?api_key=${APIkey}`;
+  const url = `https://api.themoviedb.org/3/movie/${trailerID?.id}/videos?api_key=${APIkey}`;
   useEffect(() => {
     axios.get(url).then((response) => {
       setVideo(response.data.results);
